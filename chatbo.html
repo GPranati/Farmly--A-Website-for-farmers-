@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styleb.css">
+  <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+ </head>
+<body class="show-chatbot">
+ <button class="chatbot-toggler">
+ <span class="material-outlined">mode_comment</span>
+ <span class="material-outlined">close</span>
+ </button>
+ <div class="chatbot">
+  <header>
+   <h2>Chatbot</h2>
+  </header>
+  <ul class="chatbox">
+  <li class="chat incoming">
+   <span class="material-outlined">robot_2</span>
+   <p>Hi there :) <br> How can I help you today</p>
+  </li>
+  </ul>
+   <!--textarea placeholder="Enter a message..."></textarea>
+   <span id="send-btn" class="material-outlined">send</span-->
+   <form class="grid" action="/result" method="POST">
+    {% if name %}
+            <center>
+              <h3 style="color: blue;" class="let_space">{{name}}</h3>
+            </center>
+
+    {% endif %}
+    <label for="name">Enter</label>
+    <input type="text" id="name" name="name">
+
+    <center><input class="file_submit" type="Submit"></center>
+
+  </form>
+</div>
+</body>
+</html>
